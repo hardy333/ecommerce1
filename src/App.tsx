@@ -59,7 +59,7 @@ function App() {
     <>
       <button onClick={() => getData()}>Get Data</button>
       {/* <img src={Img1} alt="" /> */}
-
+      <h1>Lorem, ipsum dolor.</h1>
       <Navbar />
       {products?.map((product) => {
         return (
