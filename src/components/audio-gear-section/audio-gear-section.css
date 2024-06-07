@@ -1,0 +1,25 @@
+.gear-section {
+  margin: 100px;
+}
+
+.gear-section .container {
+  display: flex;
+  gap: 100px;
+}
+
+.gear-content {
+  width: 50%;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.gear-img-container {
+  width: 50%;
+}
+
+.gear-img-container img {
+  border-radius: 4px;
+}

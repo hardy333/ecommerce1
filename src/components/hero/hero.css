@@ -1,0 +1,41 @@
+.hero {
+  background-color: #191919;
+  padding: 0 24px;
+  color: white;
+  height: calc(100vh - 86px);
+  min-height: 700px;
+}
+
+.hero-container {
+  height: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+
+  background: url("../../assets/home/desktop/image-hero.jpg");
+  background-size: 130%;
+  background-position: -200px -100px;
+  background-repeat: no-repeat;
+}
+
+.hero-left {
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.hero-left h1 {
+  font-size: 58px;
+  line-height: 1;
+}
+
+.hero-right {
+  border: 1px solid red;
+}
+
+.hero-right img {
+}

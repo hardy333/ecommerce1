@@ -8,6 +8,9 @@
 
 :root {
   --color-main: #4c2a16;
+  --color-primary: #d87d4a;
+  --color-secondary: #fbaf85;
+  --color-danger: #cd2c2c;
 }
 
 body {
@@ -23,13 +26,13 @@ a {
   color: var(--color-1);
 }
 
-.container {
-  width: 90%;
-  max-width: 1110px;
-  margin: auto;
-  color: var(--color-1);
+img {
+  /* max-width: 200px; */
+  max-width: 100%;
 }
 
-img {
-  max-width: 200px;
+.container {
+  width: 90%;
+  margin: auto;
+  max-width: 1110px;
 }
