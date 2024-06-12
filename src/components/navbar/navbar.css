@@ -1,6 +1,5 @@
 .navbar {
   background-color: #191919;
-  padding: 0 24px;
   color: white;
 }
 
@@ -9,4 +8,9 @@
   padding: 32px 0;
   justify-content: space-between;
   border-bottom: 1px solid hsla(0, 0%, 59%, 0.2);
+}
+
+.navbar-links {
+  display: flex;
+  gap: 10px;
 }

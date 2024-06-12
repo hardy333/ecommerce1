@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+
+import "./products.css";
 
 export interface ProductType {
-  id: number;
+  id: string;
   slug: string;
   name: string;
   image: CategoryImage;
@@ -52,8 +54,6 @@ const Products = () => {
     const data = await res.json();
 
     setProducts(data);
-
-    console.log(data);
   };
 
   useEffect(() => {
@@ -61,20 +61,22 @@ const Products = () => {
   }, []);
 
   return (
-    <div>
+    <div className="container">
       <h1>Products - {params.productName}</h1>
       {products
         ?.filter((product) => product.category === params.productName)
         .map((product) => {
           return (
-            <div key={product.id}>
-              <img
-                width={400}
-                src={`http://localhost:5173/${product.image.desktop}`}
-                alt=""
-              />
-              <p>{product.name}</p>
-              <p>{product.id}</p>
+            <div className="product-container" key={product.id}>
+              <img width={400} src={`/${product.image.desktop}`} alt="image" />
+              <div>
+                <p>{product.name}</p>
+                <p>{product.id}</p>
+
+                <Link to={`/products/${params.productName}/${product.id}`}>
+                  See details
+                </Link>
+              </div>
             </div>
           );
         })}

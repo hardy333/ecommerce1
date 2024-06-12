@@ -2,11 +2,19 @@
   display: inline-flex;
   flex-direction: column;
   gap: 9px;
+
+  position: relative;
+  padding-top: 25px;
 }
 
 .input-wrapper label {
   color: black;
   font-weight: bold;
+  font-size: 12px;
+
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .input {
@@ -27,8 +35,61 @@
   color: rgba(0, 0, 0, 0.4);
 }
 
-.input-error {
+.input-wrapper.error .input {
   color: var(--color-danger);
   border-color: var(--color-danger);
   border-width: 2px;
+}
+
+.input-wrapper.error label {
+  color: var(--color-danger);
+}
+
+.input-wrapper.error .error-msg {
+  color: var(--color-danger);
+  font-size: 12px;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* Radio Input Wrapper */
+
+.radio-input-wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+
+  border: 1px solid var(--color-primary);
+  font-size: 14px;
+  font-weight: bold;
+  padding: 18px 24px;
+  min-width: 240px;
+
+  /* margin: 20px 0; */
+  border-radius: 8px;
+}
+
+.radio-input-wrapper input {
+  color: blue;
+
+  accent-color: var(--color-primary);
+  width: 20px;
+  height: 20px;
+  position: relative;
+}
+
+.radio-input-wrapper input::before {
+  content: "";
+
+  width: 30px;
+  height: 30px;
+  background-color: black;
+
+  position: absolute;
+
+  right: -30px;
+
+  display: none;
 }
