@@ -4,12 +4,20 @@ type Props = {
   number: number;
   setNumber: (num: number) => void;
   maxQuantity?: number;
+  minAmount?: number;
 };
 
-const NumberInput = ({ number, setNumber, maxQuantity = 10000 }: Props) => {
+const NumberInput = ({
+  number,
+  setNumber,
+  maxQuantity = 10000,
+  minAmount = 1,
+}: Props) => {
   return (
     <div className="number-input-wrapper">
-      <button onClick={() => setNumber(number === 0 ? number : number - 1)}>
+      <button
+        onClick={() => setNumber(number === minAmount ? number : number - 1)}
+      >
         -
       </button>
       <span>{number}</span>

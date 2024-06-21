@@ -31,8 +31,10 @@ const ProductsSection = () => {
     <section className="products-section">
       <div className="container products-section-container ">
         {/* 1 */}
-        {productsArr.map((prod) => {
-          return <ProductCard key={prod.name} productInfo={prod} />;
+        {productsArr.map((prod, index) => {
+          return (
+            <ProductCard index={index} key={prod.name} productInfo={prod} />
+          );
         })}
       </div>
     </section>

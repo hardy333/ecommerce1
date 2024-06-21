@@ -1,0 +1,42 @@
+.speaker2-section-container {
+  background-image: url(../../assets/home/mobile/image-speaker-zx7.jpg);
+  background-position: right top;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  border-radius: 5px;
+
+  display: flex;
+  align-items: center;
+  min-height: 320px;
+}
+
+.speaker2-section-container .content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-left: 20px;
+}
+
+@media (min-width: 500px) {
+  .speaker2-section-container {
+    /* min-height: 450px; */
+  }
+
+  .speaker2-section-container .content {
+    padding-left: 40px;
+  }
+}
+
+@media (min-width: 650px) {
+  .speaker2-section-container {
+    background-image: url(../../assets/home/tablet/image-speaker-zx7.jpg);
+    min-height: 320px;
+    background-size: cover;
+  }
+}
+
+@media (min-width: 960px) {
+  .speaker2-section-container {
+    background-image: url(../../assets/home/desktop/image-speaker-zx7.jpg);
+  }
+}

@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 
 import "./products.css";
+import { useQuery } from "@tanstack/react-query";
 
 export interface ProductType {
   id: string;
@@ -46,19 +46,45 @@ export type ProductsType = ProductType[];
 
 const Products = () => {
   const params = useParams();
-  const [products, setProducts] = useState<null | ProductsType>(null);
+  // const [products, setProducts] = useState<null | ProductsType>(null);
 
   const getData = async () => {
     const res = await fetch("http://localhost:3000/products");
 
     const data = await res.json();
 
-    setProducts(data);
+    return data;
+    // setProducts(data);
   };
 
-  useEffect(() => {
-    getData();
-  }, []);
+  // useEffect(() => {
+  //   getData();
+  // }, []);
+
+  const {
+    data: products,
+    isError,
+    isLoading,
+  } = useQuery<ProductsType>({
+    queryKey: ["products"],
+    queryFn: getData,
+  });
+
+  if (isError) {
+    return (
+      <div>
+        <p>Something went wrong, please try again!</p>
+      </div>
+    );
+  }
+
+  if (isLoading) {
+    return (
+      <div>
+        <h1>Loading !!</h1>
+      </div>
+    );
+  }
 
   return (
     <div className="container">

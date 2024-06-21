@@ -14,3 +14,36 @@
   display: flex;
   gap: 10px;
 }
+
+.nav-toggle-btn {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .navbar-links {
+    background-color: red;
+    display: none;
+  }
+
+  .navbar-logo-container {
+    display: flex;
+    align-items: center;
+
+    gap: 20px;
+  }
+
+  .nav-toggle-btn {
+    display: block;
+  }
+}
+
+@media (max-width: 400px) {
+  .navbar-logo-container {
+    background-color: red;
+    width: 100%;
+  }
+
+  .navbar-logo {
+    margin: auto;
+  }
+}

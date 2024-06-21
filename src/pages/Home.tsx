@@ -5,6 +5,7 @@ import ProductsSection from "../components/products-section/ProductsSection";
 import SpeakerSection from "../components/speaker-section/SpeakerSection";
 import Input from "../components/ui/input/Input";
 import NumberInput from "../components/ui/number-input/NumberInput";
+import Speaker2Section from "../components/speaker2-secsion/Speaker2Section";
 // import Img1 from "./assets/product-yx1-earphones/desktop/image-category-page-preview.jpg";
 
 const Home = () => {
@@ -15,6 +16,7 @@ const Home = () => {
       <Hero />
       <ProductsSection />
       <SpeakerSection />
+      <Speaker2Section />
       <AudioGearSection />
 
       <div className="container">

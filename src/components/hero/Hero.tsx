@@ -13,7 +13,7 @@ const Hero = () => {
             made for the passionate music enthusiast.
           </p>
           {/* <Link to="/products/headphones/4">See Product</Link> */}
-          <Button isLink={true} to="/products/headphones/4">
+          <Button role="link" isLink={true} to="/products/headphones/4">
             See Product
           </Button>
         </div>
