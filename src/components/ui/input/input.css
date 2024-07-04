@@ -29,10 +29,12 @@
 
 .input:focus {
   outline: none;
+  border-color: var(--color-primary);
 }
 
 .input::placeholder {
   color: rgba(0, 0, 0, 0.4);
+  font-weight: normal;
 }
 
 .input-wrapper.error .input {
@@ -52,6 +54,17 @@
   position: absolute;
   top: 0;
   right: 0;
+  max-width: calc(100% - 100px);
+
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+
+  text-decoration: none;
+}
+
+abbr {
+  text-decoration: none;
 }
 
 /* Radio Input Wrapper */

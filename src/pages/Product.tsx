@@ -47,8 +47,6 @@ const Product = () => {
     setNum(getProdCurrNumber(cartState, product));
   }, [product, setNum, cartState]);
 
-  console.log(123);
-
   return (
     <>
       <div className="container product-inner-container">
@@ -62,7 +60,6 @@ const Product = () => {
               <NumberInput maxQuantity={50} number={num} setNumber={setNum} />
               <Button
                 onClick={() => {
-                  console.log("Hello");
                   updateCart(num, product);
                 }}
                 type="primary"

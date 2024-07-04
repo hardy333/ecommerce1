@@ -28,11 +28,8 @@ const CartContextProvider = ({ children }: Props) => {
   const clearCart = () => {
     setCartState([]);
   };
-  console.log(cartState);
 
   const updateCart = (num: number, prod: ProductType) => {
-    console.log(num, prod);
-
     // 0 -----------------------
     if (num === 0) {
       const newCartState = cartState.filter(

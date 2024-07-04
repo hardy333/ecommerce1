@@ -1,4 +1,4 @@
-import { HTMLAttributes, HtmlHTMLAttributes, ReactNode } from "react";
+import { HTMLAttributes, ReactNode } from "react";
 import { Link } from "react-router-dom";
 import "./button.css";
 
@@ -15,30 +15,31 @@ type ButtonProps = {
   children: ReactNode;
   isLink?: boolean;
   to?: string;
-  type?: "primary" | "secondary" | "link" | "dark";
-} & HTMLAttributes<HTMLButtonElement> &
-  HtmlHTMLAttributes<HTMLLinkElement>;
+  type?: "button" | "submit" | "reset";
+  variant?: "primary" | "secondary" | "link" | "dark";
+} & HTMLAttributes<HTMLButtonElement>;
 
 const Button = ({
   children,
   to = "./",
   isLink = false,
-  type = "primary",
+  variant = "primary",
+  type = "button",
   ...props
 }: ButtonProps) => {
   const content = (
     <>
       {children}
-      {type === "link" ? <ArrowSvg /> : null}
+      {variant === "link" ? <ArrowSvg /> : null}
     </>
   );
 
   return isLink ? (
-    <Link className={`btn btn-${type}`} to={to}>
+    <Link className={`btn btn-${variant}`} to={to}>
       {content}
     </Link>
   ) : (
-    <button {...props} className={`btn btn-${type}`} type="button">
+    <button type={type} {...props} className={`btn btn-${variant}`}>
       {content}
     </button>
   );

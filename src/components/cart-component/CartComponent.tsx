@@ -83,7 +83,7 @@ const CartComponent = ({ modalIsOpen, setIsOpen }: Props) => {
             navigate("/checkout");
           }}
         >
-          Back to home
+          Continue
         </button>
       </Modal>
     </>
