@@ -15,7 +15,7 @@ type ButtonProps = {
   children: ReactNode;
   isLink?: boolean;
   to?: string;
-  type?: "button" | "submit" | "reset";
+  // type?: "button" | "submit" | "reset";
   variant?: "primary" | "secondary" | "link" | "dark";
 } & HTMLAttributes<HTMLButtonElement>;
 
@@ -24,7 +24,6 @@ const Button = ({
   to = "./",
   isLink = false,
   variant = "primary",
-  type = "button",
   ...props
 }: ButtonProps) => {
   const content = (
@@ -39,7 +38,7 @@ const Button = ({
       {content}
     </Link>
   ) : (
-    <button type={type} {...props} className={`btn btn-${variant}`}>
+    <button {...props} className={`btn btn-${variant}`}>
       {content}
     </button>
   );

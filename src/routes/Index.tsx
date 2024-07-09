@@ -5,6 +5,7 @@ import Products from "../pages/Products";
 import Checkout from "../pages/checkout/Checkout";
 // import Product from "../pages/Product";
 import ProductWithRedux from "../pages/ProductWithRedux";
+import Practise from "../pages/practise/Practise";
 // import ProductWithRedux from "../pages/ProductWithRedux";
 
 const RoutesComponent = () => {
@@ -20,6 +21,7 @@ const RoutesComponent = () => {
         {/* <Route path="/products/:productName/:productId" element={<Product />} /> */}
 
         <Route path="/checkout" element={<Checkout />} />
+        <Route path="/practise" element={<Practise />} />
       </Routes>
     </>
   );

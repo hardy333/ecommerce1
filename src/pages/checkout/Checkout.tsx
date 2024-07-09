@@ -312,9 +312,7 @@ const Checkout = () => {
                 <p>TOTAL</p>
                 <p>232</p>
               </div>
-              <Button type="submit" variant="primary">
-                Continue
-              </Button>
+              <Button variant="primary">Continue</Button>
               {/* <button>Continue</button> */}
             </footer>
           </aside>
